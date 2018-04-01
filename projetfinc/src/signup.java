@@ -58,7 +58,7 @@ public class signup extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Docteur Login ");
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\BILLEL\\Desktop\\cabinet medical\\29853356_1812015288850750_348037764_n.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon("D:\\projet\\licencep\\projetfinc\\29853356_1812015288850750_348037764_n.png")); // NOI18N
         jLabel7.setText("jLabel7");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

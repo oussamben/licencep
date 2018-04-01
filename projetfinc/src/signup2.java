@@ -51,7 +51,7 @@ public class signup2 extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 204));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\BILLEL\\Desktop\\cabinet medical\\29855843_1812029412182671_42965254_n.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\projet\\licencep\\projetfinc\\29855843_1812029412182671_42965254_n.png")); // NOI18N
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Calibri", 2, 36)); // NOI18N
