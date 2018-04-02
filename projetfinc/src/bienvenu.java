@@ -29,66 +29,61 @@ public class bienvenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jToggleButton1 = new javax.swing.JToggleButton();
         jToggleButton2 = new javax.swing.JToggleButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+
+        jPanel1.setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Vani", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel2.setText("BIENVENU DANS VOTRE CABINET");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(90, 50, 300, 20);
 
         jToggleButton1.setBackground(new java.awt.Color(255, 204, 153));
         jToggleButton1.setText("Docteur");
+        jToggleButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jToggleButton1MouseClicked(evt);
+            }
+        });
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButton1);
-        jToggleButton1.setBounds(190, 90, 130, 23);
+        jPanel1.add(jToggleButton1);
+        jToggleButton1.setBounds(200, 90, 130, 23);
 
         jToggleButton2.setBackground(new java.awt.Color(255, 204, 153));
         jToggleButton2.setText("Secrétaire");
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jToggleButton2);
-        jToggleButton2.setBounds(190, 130, 130, 23);
-
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("X");
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+        jToggleButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
+                jToggleButton2MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(480, 10, 10, 17);
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setText("-");
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(460, 10, 10, 14);
-
-        jLabel2.setFont(new java.awt.Font("Vani", 2, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel2.setText("BIENVENU DANS VOTRE CABINET");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(90, 40, 310, 40);
+        jPanel1.add(jToggleButton2);
+        jToggleButton2.setBounds(200, 130, 130, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/29750532_1854319221310177_1931568995_n.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 500, 312);
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(0, 0, 500, 310);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -97,17 +92,23 @@ public class bienvenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    private void jToggleButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton2MouseClicked
+       signup2 sig =new signup2(); 
+       sig.setVisible(true);
+       sig.pack();
+       sig.setLocationRelativeTo(null);
+       sig.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       this.dispose();
+    }//GEN-LAST:event_jToggleButton2MouseClicked
 
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-    System.exit(0);
-    }//GEN-LAST:event_jLabel3MouseClicked
-
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-    this.setState(JFrame.ICONIFIED);
-    }//GEN-LAST:event_jLabel4MouseClicked
+    private void jToggleButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton1MouseClicked
+       signup sign =new signup(); 
+       sign.setVisible(true);
+       sign.pack();
+       sign.setLocationRelativeTo(null);
+       sign.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       this.dispose();
+    }//GEN-LAST:event_jToggleButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -147,8 +148,7 @@ public class bienvenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton2;
     // End of variables declaration//GEN-END:variables
