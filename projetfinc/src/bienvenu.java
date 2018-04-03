@@ -39,13 +39,14 @@ public class bienvenu extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Vani", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 102));
         jLabel2.setText("BIENVENU DANS VOTRE CABINET");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(90, 50, 300, 20);
+        jLabel2.setBounds(120, 50, 340, 30);
 
         jToggleButton1.setBackground(new java.awt.Color(255, 204, 153));
+        jToggleButton1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jToggleButton1.setText("Docteur");
         jToggleButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -58,9 +59,10 @@ public class bienvenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jToggleButton1);
-        jToggleButton1.setBounds(200, 90, 130, 23);
+        jToggleButton1.setBounds(190, 90, 130, 25);
 
         jToggleButton2.setBackground(new java.awt.Color(255, 204, 153));
+        jToggleButton2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jToggleButton2.setText("Secrétaire");
         jToggleButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -68,7 +70,7 @@ public class bienvenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jToggleButton2);
-        jToggleButton2.setBounds(200, 130, 130, 23);
+        jToggleButton2.setBounds(190, 120, 130, 25);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/29750532_1854319221310177_1931568995_n.png"))); // NOI18N
         jPanel1.add(jLabel1);
