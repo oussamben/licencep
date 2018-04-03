@@ -1,5 +1,10 @@
 
+import java.awt.HeadlessException;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -37,11 +42,11 @@ public class signup2 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        usere = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        passe = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        login = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -128,23 +133,28 @@ public class signup2 extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Sign Up");
 
-        jTextField1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(51, 51, 51));
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
+        usere.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        usere.setForeground(new java.awt.Color(51, 51, 51));
+        usere.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
 
         jLabel5.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         jLabel5.setText("User Name");
 
-        jPasswordField1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jPasswordField1.setForeground(new java.awt.Color(51, 51, 51));
-        jPasswordField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
+        passe.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        passe.setForeground(new java.awt.Color(51, 51, 51));
+        passe.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
 
         jLabel6.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         jLabel6.setText("Login Password ");
 
-        jButton1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(51, 51, 51));
-        jButton1.setBorder(null);
+        login.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        login.setForeground(new java.awt.Color(51, 51, 51));
+        login.setBorder(null);
+        login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginActionPerformed(evt);
+            }
+        });
 
         jButton2.setForeground(new java.awt.Color(51, 51, 51));
         jButton2.setBorder(null);
@@ -170,12 +180,12 @@ public class signup2 extends javax.swing.JFrame {
                                             .addGap(49, 49, 49)
                                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField1)
-                                        .addComponent(jPasswordField1))))
+                                        .addComponent(usere)
+                                        .addComponent(passe))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(93, 93, 93)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                                    .addComponent(login, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
                                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE))))
                         .addGap(0, 65, Short.MAX_VALUE))))
         );
@@ -189,13 +199,13 @@ public class signup2 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(usere, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19)
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(passe, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -223,6 +233,29 @@ public class signup2 extends javax.swing.JFrame {
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         this.setState(JFrame.ICONIFIED);
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
+  try {
+            Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+            java.sql.Connection con=DriverManager.getConnection("jdbc:derby:E:\\projet\\licencep\\projetfinc\\logindoc","log","doc");
+            java.sql.Statement stmt=con.createStatement();
+            String DBQ="select * from log.loginsec where username='"+usere.getText()+"'AND password='"+passe.getText()+"'";
+            ResultSet rs=stmt.executeQuery(DBQ);
+            if(rs.next())
+            {bureausec burs =new bureausec(); 
+       burs.setVisible(true);
+       burs.pack();
+       burs.setLocationRelativeTo(null);
+       burs.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       this.dispose();
+            } 
+            else
+                JOptionPane.showMessageDialog(null,"ressaisir les informations correctement");
+        } catch (HeadlessException | ClassNotFoundException | SQLException e) {
+            System.err.println(e);
+        }
+             
+    }//GEN-LAST:event_loginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -260,7 +293,6 @@ public class signup2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -272,7 +304,8 @@ public class signup2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton login;
+    private javax.swing.JPasswordField passe;
+    private javax.swing.JTextField usere;
     // End of variables declaration//GEN-END:variables
 }
