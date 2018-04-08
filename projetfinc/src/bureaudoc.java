@@ -35,6 +35,7 @@ public class bureaudoc extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,7 +52,7 @@ public class bureaudoc extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton1);
-        jButton1.setBounds(90, 60, 140, 40);
+        jButton1.setBounds(90, 30, 140, 40);
 
         jButton2.setBackground(new java.awt.Color(0, 153, 204));
         jButton2.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
@@ -63,7 +64,7 @@ public class bureaudoc extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton2);
-        jButton2.setBounds(90, 140, 140, 40);
+        jButton2.setBounds(90, 110, 140, 40);
 
         jButton3.setBackground(new java.awt.Color(0, 153, 204));
         jButton3.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
@@ -75,7 +76,7 @@ public class bureaudoc extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton3);
-        jButton3.setBounds(90, 220, 140, 40);
+        jButton3.setBounds(90, 190, 140, 40);
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 204));
@@ -98,6 +99,13 @@ public class bureaudoc extends javax.swing.JFrame {
         });
         jPanel2.add(jLabel3);
         jLabel3.setBounds(670, 20, 34, 14);
+
+        jButton4.setBackground(new java.awt.Color(0, 153, 204));
+        jButton4.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("Bilen");
+        jPanel2.add(jButton4);
+        jButton4.setBounds(90, 263, 140, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/7058664efd1685e.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -179,6 +187,7 @@ public class bureaudoc extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

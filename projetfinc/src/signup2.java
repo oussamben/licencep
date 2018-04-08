@@ -257,7 +257,7 @@ public class signup2 extends javax.swing.JFrame {
        this.dispose();
             } 
             else
-                JOptionPane.showMessageDialog(null,"ressaisir les informations correctement");
+                JOptionPane.showMessageDialog(null,"<html><i><b>Ressaisir Les Informations Correctement</b></i></html>","Erreur",JOptionPane.ERROR_MESSAGE);
         } catch (HeadlessException | ClassNotFoundException | SQLException e) {
             System.err.println(e);
         }
