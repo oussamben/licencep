@@ -35,9 +35,12 @@ public class bureausec extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
         jPanel3.setLayout(null);
 
@@ -47,6 +50,11 @@ public class bureausec extends javax.swing.JFrame {
         jButton1.setText("Patient");
         jButton1.setMaximumSize(new java.awt.Dimension(91, 23));
         jButton1.setMinimumSize(new java.awt.Dimension(91, 23));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton1);
         jButton1.setBounds(130, 210, 150, 40);
 
@@ -99,6 +107,18 @@ public class bureausec extends javax.swing.JFrame {
         jPanel3.add(jLabel3);
         jLabel3.setBounds(730, 10, 30, 30);
 
+        jButton4.setBackground(new java.awt.Color(0, 153, 204));
+        jButton4.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("Accueill");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton4);
+        jButton4.setBounds(30, 30, 110, 20);
+
         jLabel2.setForeground(new java.awt.Color(0, 102, 204));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bioprepa-1.jpg"))); // NOI18N
         jPanel3.add(jLabel2);
@@ -119,11 +139,21 @@ public class bureausec extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        RDV rdv =new RDV(); 
+       rdv.setVisible(true);
+       rdv.pack();
+       rdv.setLocationRelativeTo(null);
+       rdv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+       comptable com =new comptable(); 
+       com.setVisible(true);
+       com.pack();
+       com.setLocationRelativeTo(null);
+       com.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
@@ -133,6 +163,24 @@ public class bureausec extends javax.swing.JFrame {
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         this.setState(JFrame.ICONIFIED);
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+Patient pat =new Patient(); 
+       pat.setVisible(true);
+       pat.pack();
+       pat.setLocationRelativeTo(null);
+       pat.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+ bienvenu bie =new bienvenu(); 
+       bie.setVisible(true);
+       bie.pack();
+       bie.setLocationRelativeTo(null);
+       bie.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       this.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,6 +221,7 @@ public class bureausec extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

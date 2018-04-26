@@ -36,9 +36,12 @@ public class bureaudoc extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("bureaudoc");
+        setUndecorated(true);
 
         jPanel2.setLayout(null);
 
@@ -52,7 +55,7 @@ public class bureaudoc extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton1);
-        jButton1.setBounds(90, 30, 140, 40);
+        jButton1.setBounds(100, 50, 140, 40);
 
         jButton2.setBackground(new java.awt.Color(0, 153, 204));
         jButton2.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
@@ -64,19 +67,19 @@ public class bureaudoc extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton2);
-        jButton2.setBounds(90, 110, 140, 40);
+        jButton2.setBounds(100, 120, 140, 40);
 
         jButton3.setBackground(new java.awt.Color(0, 153, 204));
         jButton3.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Géré Patient");
+        jButton3.setText("Patient");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         jPanel2.add(jButton3);
-        jButton3.setBounds(90, 190, 140, 40);
+        jButton3.setBounds(100, 190, 140, 40);
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 204));
@@ -103,9 +106,21 @@ public class bureaudoc extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(0, 153, 204));
         jButton4.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Bilen");
+        jButton4.setText("Bilan");
         jPanel2.add(jButton4);
-        jButton4.setBounds(90, 263, 140, 40);
+        jButton4.setBounds(100, 260, 140, 40);
+
+        jButton5.setBackground(new java.awt.Color(0, 153, 204));
+        jButton5.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("Accueill");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton5);
+        jButton5.setBounds(10, 10, 100, 20);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/7058664efd1685e.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -129,7 +144,12 @@ public class bureaudoc extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+       consult con =new consult(); 
+       con.setVisible(true);
+       con.pack();
+       con.setLocationRelativeTo(null);
+       con.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -147,6 +167,15 @@ public class bureaudoc extends javax.swing.JFrame {
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
                this.setState(JFrame.ICONIFIED);
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        bienvenu bie =new bienvenu(); 
+       bie.setVisible(true);
+       bie.pack();
+       bie.setLocationRelativeTo(null);
+       bie.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,6 +217,7 @@ public class bureaudoc extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
